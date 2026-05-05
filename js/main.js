@@ -732,7 +732,7 @@ function tutorialCreateHero() {
   console.clear();
   logTitle('Step 1: Create an object');
   logText('A class is the blueprint. An object is one actual thing made from that blueprint.');
-  logText('Make one Hero object and save it in a variable named yoshi:');
+  logText('Make one new Hero instance and save it in a variable named yoshi:');
   logCode('yoshi = new Hero()');
   logHint('The word new means: build a fresh Hero instance from the Hero class.');
   waitForTutorial(() => yoshi instanceof Hero, tutorialChangeAttribute);
@@ -744,7 +744,7 @@ function tutorialChangeAttribute() {
   logText('Objects can hold data. That data is stored in attributes/properties.');
   logText('Try changing your hero color by setting the hue attribute:');
   logCode('yoshi.hue = 222');
-  logHint('Behind the scenes, a setter updates the image filter. For students: it feels like changing normal object data.');
+  logHint('Behind the scenes, a setter updates the image filter.');
   waitForTutorial(() => yoshi?.hue === 222, tutorialMoveRight);
 }
 
